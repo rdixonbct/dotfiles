@@ -1,0 +1,10 @@
+[cargo-new]
+name = "Ross Dixon"
+email = "ross.dixon@backpacknetworks.com"
+
+[alias]
+rr = "run --release"
+br = "build --release"
+
+[http]
+ssl-version.min = "tlsv1.2"

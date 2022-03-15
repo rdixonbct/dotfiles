@@ -1,0 +1,9 @@
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain
+[user]
+	name = Ross Dixon
+	email = ross.dixon@backpacknetworks.com
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
