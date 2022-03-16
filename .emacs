@@ -7,7 +7,7 @@
  '(backup-directory-alist '((".*" . "~/.emacs.d/backups/")))
  '(column-number-mode t)
  '(package-selected-packages
-   '(org-modern org json-mode yaml-mode simpleclip cargo flycheck-rust rust-mode flycheck))
+   '(lsp-ui company lsp-mode org-modern org json-mode yaml-mode simpleclip cargo flycheck-rust rust-mode flycheck))
  '(scroll-bar-mode nil)
  '(select-enable-clipboard nil)
  '(show-paren-mode t)
@@ -120,3 +120,15 @@ by using nxml's indentation rules."
 (setq initial-major-mode 'text-mode)
 
 (setq initial-scratch-message nil)
+
+(setq lsp-rust-server 'rust-analyzer)
+;; disable lsp headerline
+(setq lsp-headerline-breadcrumb-enable nil)
+;; disable lsp icons on modeline
+(setq lsp-modeline-code-actions-enable nil)
+(with-eval-after-load 'lsp-mode
+  ;; symbol navigation
+  (define-key lsp-mode-map (kbd "M-n") 'lsp-ui-find-next-reference)
+  (define-key lsp-mode-map (kbd "M-p") 'lsp-ui-find-prev-reference)
+  ;; disable automatic symbol highlighting
+  (add-hook 'lsp-mode-hook #'lsp-toggle-symbol-highlight))
