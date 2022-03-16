@@ -1,2 +1,2 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
-export PATH="$PATH:/Users/ross/bractlet/bin"
+export PATH="$PATH:$HOME/bractlet/bin"
