@@ -6,6 +6,7 @@
  '(auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
  '(backup-directory-alist '((".*" . "~/.emacs.d/backups/")))
  '(column-number-mode t)
+ '(lsp-rust-analyzer-diagnostics-disabled ["unresolved-macro-call" "unresolved-proc-macro"])
  '(package-selected-packages
    '(lsp-ui company lsp-mode org-modern org json-mode yaml-mode simpleclip cargo flycheck-rust rust-mode flycheck))
  '(scroll-bar-mode nil)
