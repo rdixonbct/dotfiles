@@ -6,7 +6,9 @@
  '(auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
  '(backup-directory-alist '((".*" . "~/.emacs.d/backups/")))
  '(column-number-mode t)
- '(lsp-rust-analyzer-diagnostics-disabled ["unresolved-macro-call" "unresolved-proc-macro"])
+ '(lsp-enable-symbol-highlighting nil)
+ '(lsp-rust-analyzer-diagnostics-disabled
+   ["unresolved-macro-call" "unresolved-proc-macro" "unresolved-import"])
  '(package-selected-packages
    '(lsp-ui company lsp-mode org-modern org json-mode yaml-mode simpleclip cargo flycheck-rust rust-mode flycheck))
  '(scroll-bar-mode nil)
@@ -133,3 +135,5 @@ by using nxml's indentation rules."
   (define-key lsp-mode-map (kbd "M-p") 'lsp-ui-find-prev-reference)
   ;; disable automatic symbol highlighting
   (add-hook 'lsp-mode-hook #'lsp-toggle-symbol-highlight))
+
+(add-hook 'rust-mode-hook #'lsp-deferred)
