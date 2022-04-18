@@ -8,9 +8,9 @@
  '(column-number-mode t)
  '(lsp-enable-symbol-highlighting nil)
  '(lsp-rust-analyzer-diagnostics-disabled
-   ["unresolved-macro-call" "unresolved-proc-macro" "unresolved-import"])
+   ["unresolved-macro-call" "unresolved-proc-macro" "unresolved-import" "type-mismatch" "mismatched-arg-count"])
  '(package-selected-packages
-   '(lsp-ui company lsp-mode org-modern org json-mode yaml-mode simpleclip cargo flycheck-rust rust-mode flycheck))
+   '(dockerfile-mode lsp-ui company lsp-mode org-modern org json-mode yaml-mode simpleclip cargo flycheck-rust rust-mode flycheck))
  '(scroll-bar-mode nil)
  '(select-enable-clipboard nil)
  '(show-paren-mode t)
@@ -137,3 +137,5 @@ by using nxml's indentation rules."
   (add-hook 'lsp-mode-hook #'lsp-toggle-symbol-highlight))
 
 (add-hook 'rust-mode-hook #'lsp-deferred)
+
+(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))

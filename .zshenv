@@ -1,3 +1,3 @@
 . "$HOME/.cargo/env"
 
-export EDITOR=emacs
+export EDITOR='emacs -nw'

@@ -5,6 +5,7 @@ email = "ross.dixon@backpacknetworks.com"
 [alias]
 rr = "run --release"
 br = "build --release"
+c = "clippy"
 
 [http]
 ssl-version.min = "tlsv1.2"
