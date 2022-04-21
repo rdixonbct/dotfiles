@@ -7,6 +7,7 @@
  '(backup-directory-alist '((".*" . "~/.emacs.d/backups/")))
  '(column-number-mode t)
  '(lsp-enable-symbol-highlighting nil)
+ '(lsp-rust-analyzer-cargo-watch-command "clippy")
  '(lsp-rust-analyzer-diagnostics-disabled
    ["unresolved-macro-call" "unresolved-proc-macro" "unresolved-import" "type-mismatch" "mismatched-arg-count"])
  '(package-selected-packages
@@ -25,8 +26,6 @@
  )
 
 ;; Put autosave files (ie #foo#) and backup files (ie foo~) in ~/.emacs.d/.
-
-
 ;; create the autosave dir if necessary, since emacs won't.
 (make-directory "~/.emacs.d/autosaves/" t)
 
