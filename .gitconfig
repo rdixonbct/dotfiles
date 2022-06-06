@@ -5,5 +5,8 @@
 [user]
 	name = Ross Dixon
 	email = ross.dixon@backpacknetworks.com
+	signingkey = 92F1155B3253ECC2
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+[commit]
+	gpgsign = true

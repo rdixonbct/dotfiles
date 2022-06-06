@@ -71,7 +71,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras)
+plugins=(git git-extras docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -122,6 +122,8 @@ bindkey -e
 
 autoload -Uz select-word-style
 select-word-style bash
+
+source <(kubectl completion zsh)
 
 # alias emacs='emacsclient -t'
 alias emacs='emacs -nw'
